@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "halosleepsure",
+  "private_key_id": "d40327fe1667fa2e705ee95c78290de8e0761020",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC2PoP16zTfFlcb\n/lVWDX7w9aAv3Nt1lk3v3/iacOeQjxyrR6ntzxg+C6fs/T+Wi2Pj3KSZNh2/bFKk\nIDZCACPwrq0dOsZqxf1i41PSszJ6NTATO+u0M7NYqqHtljelmPwMYuzbTq5cToks\nWmNNjZxbhYSwVKdYFkVs9tlnPiqbxdSsJ+YRuCIp8eTy1oLCdhazVYKFnl4YLiJP\nr71V0nF4MByGRnnjouzqsbBvg7AlpfjYHxKzRgPK1g1tsLhpJlMbAXVA3Fa5vyGg\nr+pjapNJHwcPAd995xI/vn3YqrG26EVRQxw6nucGXaH0qaqlIh8UbpZPTb6dL2zy\ntBfrKMsVAgMBAAECggEADsMElFxfdXyNRMa2qdhBAoqa1ZWprx4kJPx62iOwFh0J\ngPQ2lv0x5QCzsvYWev7CchgSuxhPk4xWK1Yynuj9AEdd3WK/5LEx45svVH9QZOa/\nBKfTYU7YxaNYp3KGAmNgcy5mKiN26yIvaUjPB16jniQ0CcZpobB4IinilULLV7+s\nwK1a+NAa3a2AC1VaBiNOznQRdkKR/bOAcPAFG7ouIoGUybComlf8ZgXkblR+wxQw\nzqdlWawQXZEWMUxBuPGVR8nz9zAWr0e7VEYtrFhZAIlLLQoN7U2Q4klunWvsWgcG\nezCbDACB01XmjI1DqqdouMJqpQRjNXQ/wJqn4taPMQKBgQD1p0A+i69Eq+qpUuEA\nbC25WTBr19+5ivmuIa0ZNGb5Hh5l42/oQCR+94fw63pANrXit0tKRDNgK2FHIAiH\nMcKq1+cjnZIhAm3hIaitxnRDNz0OYkFFUGxf2DfxhxmL5Lpa/wV4GvNZALAMqynq\nN17DH/f+tW8aT9UUD6EY245WrQKBgQC9647E9OACqOgFWyv2JhchTMrv15PzsvcO\nnyvMbzEsXXVnSyskAAIkperdkrNgR+oWhYKlGyqOhLGfGjQv55ZIQNMzFK/yFmVn\njswdszd+4JtonK62a4U/wfSZ7MzJz5rzWlzIYiUjHa7XsdFWSlzW/eJtSYarWb+o\nMwjxJgGbCQKBgQDQXmvqIcYrc7/6nGhqWVh3jaW69EO7OJ0NDVest3xY9ylFt6Pm\n1vGeGQzgWH08Fqw1gNCGUE9b1bAQCqXxN04uaDCRT0jyYwMdIdXYgSuBEEvj9Yfz\n6YHj0p2xa61Jslw4b3UOKZ4c8q5iMJW/K/RfgrBzBycUpH7TI2a8lQ+piQKBgQCX\nuclsVglkdpYuOUEsvA98fgIejEZZyd8QIl92Slqpi9yQcf/8Gbmcl6TD8UA2qh08\nctsFlmdwRlg0uFV68/QesxNHWr6ZlATdL7qn+5ZZWY0ujQYTHGDup8AG/KQ6kg3D\nXqyDNc1feYZGMXwBCRWUeG3dS4E4AVJZSLRbGzbrKQKBgQCWLHNRccRR3XzCGYgH\noy/T56CoKNLlBSIZ6DUQXarUekjaxsi7GODoNoAcTKvJHY3VFwl1v3U+sGcv0llq\n1HcLYLZci49tKuvbrSTTd03NCK0CEVH2suB7jsfhQdvPyEIR7wptVQ4SOXB9q9k9\nY+C2oUda7NngbApkyp7KmXvX2w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-gu98n@halosleepsure.iam.gserviceaccount.com",
+  "client_id": "107258883193591708253",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gu98n%40halosleepsure.iam.gserviceaccount.com"
+}

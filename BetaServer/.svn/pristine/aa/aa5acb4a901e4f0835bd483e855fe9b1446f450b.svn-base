@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<script src='/resource?js=jquery-3.3.1.min.js'>
+		</script>
+		<script src='/resource?js=socket.io.js'>
+		</script>
+		<style>
+			.a-textarea{
+				width:100%;
+				height:75%;
+				resize:none;
+			}
+			.b-textarea{
+				width:100%;
+				height:100px;
+				resize:none;
+			}
+			button{
+				width:150px;
+			}
+			.a-container{
+				width:100%
+			}
+			.b-container{
+				width:50%;
+				height:25%;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<textarea id='output' class='a-textarea'></textarea>
+		<div class='a-container'>
+		<div class='b-container'>
+			<button id='f1'>connect to IO</button>
+			<button id='f2'>login</button>
+			<button id='f3'>-</button>
+			<button id='f4'>-</button>
+			<br/>
+			<button id='f5'>disconnect</button>
+			<button id='f6'>clear log</button>
+		</div>
+		<div class='b-container'>
+			account:<br/>
+			<input type='text' id='account'/><br/>
+			<!-- data:<br/>
+			<textarea id='data' class='b-textarea'></textarea><br/> -->
+			<button id='f10'>print log</button>
+		</div>
+		</div>
+	</body>
+	<script>
+		var socket;
+		
+		function log(str){
+			$('#output').val($('#output').val()+str+'\n');
+			$('#output').scrollTop($('#output')[0].scrollHeight);
+		}
+		$("#f1").on('click',function(){
+			if(!socket){
+				var host='http://3.21.2.203:7084';
+				socket= io.connect(host,{
+					'transports':['websocket']
+				});
+				socket.on('connect',function(){
+					log('=====\nStart connect Socket IO\nconnected host:'+host+'\n=====');
+				});
+				socket.on('show_log',function(data){
+					log('=====\nlog\n=====\n'+data.msg+'\n'+JSON.stringify(data.data)+'\n=====');
+				});
+			}else{
+				socket.connect();
+			}
+		})
+		$('#f2').on('click',function(){
+			var param;
+			param={"user_token":"a5b42caa7d0e8da85d93db947f451fc854adea3c"};
+			socket.emit('login',param,
+				function(data){log('=====\nLogin message\n=====\n'+JSON.stringify(data,null,4));});
+		});
+		$('#f5').on('click',function(){
+			socket.disconnect();
+		});
+		$('#f6').on('click',function(){
+			$('#output').val('');
+		});
+		$('#f10').on('click',function(){
+			var account=$('#account').val();
+			if(account){
+				socket.emit('printLog',account,function(responsesdata){
+					console.log(responsesdata);
+					log('=====\n'+account+'\n=====\n'+JSON.stringify(responsesdata,null,4));
+				});
+			}
+		});
+		
+	</script>
+</html>

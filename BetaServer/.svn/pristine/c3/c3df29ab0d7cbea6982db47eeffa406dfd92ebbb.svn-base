@@ -1,0 +1,67 @@
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=320, initial-scale=2.0">
+                <title>Reset Password</title>
+                <style>
+                    .center{
+                        margin: auto;
+                        position: absolute;
+                        top: 0; left: 0; bottom: 0; right: 0;
+                        width: 300px;
+                        height:150px;
+                        text-align: center;
+                    }
+                    table{
+                        width:100%;
+                        text-align: center;
+                    }
+                    span{
+                        color: #ff0000
+                    }
+                </style>
+            </head>
+    <body>
+        <form class="center" method="post" action="resetPassword" enctype="application/x-www-form-urlencoded">
+            <table>
+                <tr>
+                    <td>New password:</td>
+                    <td>
+                        <input id="password" type="password" name="password"/>
+                        <span id='passwordSpan'></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm password:</td>
+                    <td>
+                        <input id="cpassword" type="password" name="cpassword"/>
+                        <span id='notMatch'></span>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="token" value="%token%"/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+    <script src="/resource?js=jquery-3.3.1.min.js"></script>
+    <script>
+        $("form").submit(function(e){
+            var Regx = /^(?=.*?[a-zA-Z])(?=.*?\d).*$/;
+            if(!Regx.test($("#password").val()) || $("#password").val().length<6){
+                $("#passwordSpan").text("The password must be a string of at least 6 digits in English and numbers.");
+                $("#passwordSpan").css({'display':'block'});
+                return false;
+            }else{
+                $("#passwordSpan").css({'display':'none'});
+            }
+            if($("#password").val()!=$("#cpassword").val()){
+                e.preventDefault();
+                $("#notMatch").text("Password not match!");
+                $("#notMatch").css({'display':'block'});
+                return false;
+            }else{
+                $("#notMatch").css({'display':'none'});
+            }
+        });
+    </script>
+</html>
